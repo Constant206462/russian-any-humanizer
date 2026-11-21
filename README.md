@@ -19,10 +19,13 @@
   Custom Instructions, и LLM будет писать плотный живой русский с первого раза.
 
 ## Зависимости
-- `pymorphy3` — **установлен в этом окружении** (`python3 -m pymorphy3` /
-  `pip show pymorphy3` подтверждает). На чистой машине: `pip install pymorphy3`.
-- `hunspell` — бинарник для подсказок (Debian/Ubuntu: `apt install hunspell`).
-  Словарь Goudron из `assets/ru_hunspell` используется в первую очередь.
+
+- `pymorphy3` — движок орфографического чеха. Установка:
+  `pip install pymorphy3` (проверка: `pip show pymorphy3`).
+- `hunspell` — бинарник для подсказок и обнаружения опечаток. Словарь Goudron
+  встроен в `assets/ru_hunspell`; сам бинарник ставится отдельно — Debian/Ubuntu:
+  `apt install hunspell`, macOS: `brew install hunspell`. Без него проверка
+  работает, но без подсказок.
 - `colorama` — опционально (цветной вывод в терминале).
 
 ## Как пользоваться (Hermes)
