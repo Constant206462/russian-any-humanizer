@@ -22,8 +22,6 @@ spell_checker.py — орфографический чек + словарь дл
     python3 spell_checker.py <файл> --correct            # выводит чистый текст (только опечатки)
     python3 spell_checker.py <файл> --correct --out fixed.txt
     python3 spell_checker.py <файл> --json               # машино-читаемый вывод
-    echo "текст" | python3 spell_checker.py -            # stdin
-    echo "текст" | python3 spell_checker.py - --correct
 
 Данные: assets/vocabulary.json (accepted_loanwords + slop). Расширяйте сами.
 """
