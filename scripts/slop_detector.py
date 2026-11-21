@@ -1,7 +1,20 @@
 import sys
 import re
-from colorama import Fore, Style, init
 
+# colorama опционален — без него вывод просто без цвета
+try:
+    from colorama import Fore, Style, init
+except Exception:
+    class _Null:
+        RED = ""
+        GREEN = ""
+        CYAN = ""
+        YELLOW = ""
+        RESET_ALL = ""
+    Fore = _Null()
+    Style = _Null()
+    def init(*a, **kw):
+        pass
 init(autoreset=True)
 
 # Список маркеров ИИ (AI slop) для русского языка
@@ -88,7 +101,10 @@ def analyze_text(filepath):
     found_issues = []
     
     for word in SLOP_WORDS:
-        count = text_lower.count(word.lower())
+        # Считаем фразу как целые слова: гибкий пробельный разделитель внутри,
+        # граница \w по краям — чтобы "но и" не падало на "обязательно изучите".
+        pattern = (r"(?<!\w)" + r"\s+".join(re.escape(p) for p in word.split()) + r"(?!\w)")
+        count = len(re.findall(pattern, text_lower))
         if count > 0:
             found_issues.append((word, count))
             
