@@ -1,0 +1,10 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "Writing",
+      "description": "Russian text humanizer — strips AI slop and runs a pymorphy3 spell check.",
+      "skills": ["russian-any-humanizer"]
+    }
+  ]
+}

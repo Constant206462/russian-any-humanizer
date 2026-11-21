@@ -4,6 +4,15 @@ description: "Комплексное удаление маркеров ИИ (AI-
 version: 1.0.0
 author: Constant206462. Original by @horosheff
 license: MIT
+triggers:
+  - humanize
+  - "очеловечить"
+  - "AI slop"
+  - "AI-isms"
+  - рерайт
+  - переработка
+tools:
+  - terminal
 metadata:
   hermes:
     tags: [writing, editing, humanize, anti-ai-slop, prose, text]
