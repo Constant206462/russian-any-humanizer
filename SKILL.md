@@ -1,7 +1,15 @@
 ---
 name: russian-any-humanizer
 description: "Комплексное удаление маркеров ИИ (AI-slop) и неестественных конструкций из русскоязычного текста. Плюс орфографическая проверка на pymorphy3: находит и исправляет опечатки. Делает текст живым, сильным и по-настоящему человечным."
-user-invocable: true
+version: 1.0.0
+author: Constant206462. Original by @horosheff
+license: MIT
+metadata:
+  hermes:
+    tags: [writing, editing, humanize, anti-ai-slop, prose, text]
+    category: creative
+    homepage: https://github.com/Constant206462/russian-any-humanizer
+    related_skills: [humanizer]
 ---
 
 # Russian Humanizer (Очеловечивание русского текста)
